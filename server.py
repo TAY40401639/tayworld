@@ -93,7 +93,7 @@ def updateCountryByNamePage():
     c['capital']=request.args.get('capital')
     c['continent']=request.args.get('continent')
     return render_template(
-        'country-edit.html',
+        'country.html',
         c=c)
 
 if __name__ == "__main__":
