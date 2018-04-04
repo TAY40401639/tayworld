@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <!doctype html>
 <html>
 <head>
@@ -15,22 +14,4 @@
 			{% endfor %}
 		</ul>
 	</body>
-=======
-<!doctype html>
-<html>
-<head>
-	<link rel='stylesheet' href='/static/style.css'>
-</head>
-	<body>
-		<h1>{{a}}</h1>
-		<div>There are {{length_of_cl}} countries in {{a}}</div>
-		<ul>
-			{% for c in cl %}
-			<li><a href='/countryByName/{{c.name}}'>
-				<img src='/static/flags/{{c.tld}}.gif' class='tiny'>
-			 {{c.name}}</a></li>
-			{% endfor %}
-		</ul>
-	</body>
->>>>>>> 0398d8b2b1a1f7493120f6954faa13224c1c9e03
 </html>
