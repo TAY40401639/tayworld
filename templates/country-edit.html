@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+<head>
+	<link rel='stylesheet' href='/static/style.css'>
+</head>
+	<body class="detail">
+		<div><a href="/"><<< Go back to Home</a></div>
+		
+		<form action='/updateCountryByName'>
+		<h1>{{c['name']}}</h1>
+		<div class='properties'>
+			
+			<div>
+				<div><input type='hidden' name="name" value="{{c['name']}}"></div>
+			</div>
+			<div>
+				<div>Capital</div>
+				<div><input type="text" name="capital" value="{{c['capital']}}"></div>
+			</div>
+			<div>
+				<div>Continent</div>
+				<div><input type="text" name="continent" value="{{c['continent']}}"></div>
+			</div>
+
+			<div>
+				<div>Area (square kilometer)</div>
+				<div><input type="text" name="area" value="{{c['area']}}"></div>
+			</div>
+			<div>
+				<div>Population</div>
+				<div><input type="text" name="population" value="{{c['population']}}"></div>
+			</div>
+			<div>
+				<div>GDP (million $)</div>
+				<div><input type="text" name="gdp" value="{{c['gdp']}}"></div>
+			</div>
+		</div>
+		<img src="/static/flags/{{c['tld']}}.gif" class='big'>
+		<div>
+			<input type="submit" value="Update">
+		</div>
+		</form>		
+
+	</body>
+</html>

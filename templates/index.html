@@ -4,8 +4,11 @@
 	<link rel='stylesheet' href='/static/style.css'>
 </head>
 	<body>
+	<div class="container">
+		<div class="header">
 		<h1>World Factbook</h1>
-		<!-- <div>There are {{w|length}} countries in the world.</div> -->
+		</div>
+		<div>There are {{w|length}} countries in this page</div>
 		<ul>
 			{% for c in w %}
 			<li><a href='/countryByName/{{c.name}}'>
@@ -19,5 +22,6 @@
 		<div class='nav_button'>
 			<a href='/begin/{{page_number+page_size}}'>Next Page</a>
 		</div>
+	</div>
 	</body>
 </html>

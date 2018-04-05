@@ -13,10 +13,11 @@ app = Flask(__name__)
 @app.route('/')
 def mainPage():
 
+    w.sort(key=lambda c: c['name'])
     return render_template('index.html',
-        page_number=0,
-        page_size=page_size,
-        w=w[0:page_size])
+            page_number=0,
+            page_size=page_size,
+            w=w[0:page_size])
 
 
 @app.route('/begin/<b>')
@@ -101,8 +102,7 @@ def updateCountryByNamePage():
 def newCountryByNamePage():
  
     return render_template(
-        'country-create.html',
-        c=c)
+        'country-create.html',c=c)
 
 @app.route('/createCountryByName')
 def createCountryByNamePage():
@@ -112,14 +112,9 @@ def createCountryByNamePage():
     c['area']=int(request.args.get('area'))
     c['population']=int(request.args.get('population'))
     c['gdp']=int(request.args.get('gdp'))
-    c['tld']=request.args.get('tld')
-    # if request.method=='POST':
-    #     f=request.files['flag']
-    #     f.save('/static/flags/')
-    #     return "file upload"
-    return render_template(
-        'newcountry.html',
-        c=c)
+    c['tld']=request.args.get('tld')  
+    w.sort(key=lambda c: c['name'])
+    return render_template('country.html',c=c)
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0',port=5639,debug=True)
