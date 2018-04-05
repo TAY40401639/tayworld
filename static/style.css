@@ -1,5 +1,9 @@
 body{
-	font-family:arial;
+	font-family:arial; 
+}
+body.detail{
+   
+    line-height: 5ex;
 }
 
 img.tiny{
@@ -7,9 +11,11 @@ img.tiny{
     border: solid thin grey;	
 }
 img.big {
-    width: 200px;
+    width: 250px;
     border: solid thin grey;
-    position: inherit;
+    position: absolute;
+    left:55ex;
+    bottom: 65ex;
 }
 
 .properties div div{
@@ -23,11 +29,35 @@ img.big {
 }
 a{
 	text-decoration: none;
+
 }
 .nav_button{
     border: solid thin black;
     padding: 1ex;
-    width: 20ex;
+    width: 15ex;
     text-align: center;
     display: inline-block;
+     border-radius: 1ex;
+    background-color: lightgrey;
+}
+.button{
+    border: solid thin black;
+    padding: 2px;
+    width: 8ex;
+    text-align: center;
+    display: inline-block;
+    border-radius: 1ex;
+    background-color: lightgrey;
+}
+input[type=text] {
+    padding:5px; 
+    border:2px solid #ccc; 
+    border-radius: 5px;
+}
+input[type=submit] {
+    padding:5px 15px; 
+    background:#ccc; 
+    border:0 none;
+    cursor:pointer;
+    border-radius: 5px; 
 }

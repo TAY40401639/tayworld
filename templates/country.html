@@ -3,7 +3,7 @@
 <head>
 	<link rel='stylesheet' href='/static/style.css'>
 </head>
-	<body>
+	<body class="detail">
 		<h1>{{c['name']}}</h1>
 		<div class='properties'>
 			<div>
@@ -15,6 +15,10 @@
 				<div><a href='../continent/{{c.continent}}'>{{c['continent']}}</a></div>
 			</div>
 			<div>
+				<div>Area (square kilometer)</div>
+				<div>{{"{:,.0f}".format(c['area'])}}</div>
+			</div>
+			<div>
 				<div>Population</div>
 				<div>{{"{:,.0f}".format(c['population'])}}</div>
 			</div>
@@ -22,10 +26,22 @@
 				<div>GDP (million $)</div>
 				<div>{{ "{:,.0f}".format(c['gdp']/1000000) }}</div>
 			</div>
+			<div>
+				<div>TLD</div>
+				<div>{{c['tld']}}</div>
+			</div>
 		</div>
 		<img src="/static/flags/{{c['tld']}}.gif" class='big'>
-		<div class="delete-button">
+
+		<div class="button">
+			<a href="/newCountryByName">New</a>
+		</div>
+		<div class="button">
+			<a href="/editCountryByName/{{c.name}}">Edit</a>
+		</div>
+		<div class="button">
 			<a href="/delete/{{c.name}}">Delete</a>
 		</div>
+		
 	</body>
 </html>
