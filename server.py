@@ -95,7 +95,7 @@ def updateCountryByNamePage():
     c['population']=int(request.args.get('population'))
     c['gdp']=int(request.args.get('gdp'))
     return render_template(
-        'country.html',
+        'country.html',  
         c=c)
 
 @app.route('/newCountryByName')
@@ -106,13 +106,15 @@ def newCountryByNamePage():
 
 @app.route('/createCountryByName')
 def createCountryByNamePage():
+    c={}
     c['name']=request.args.get('name')
     c['capital']=request.args.get('capital')
     c['continent']=request.args.get('continent')
     c['area']=int(request.args.get('area'))
     c['population']=int(request.args.get('population'))
     c['gdp']=int(request.args.get('gdp'))
-    c['tld']=request.args.get('tld')  
+    c['tld']=request.args.get('tld')
+    w.append(c)  
     w.sort(key=lambda c: c['name'])
     return render_template('country.html',c=c)
 
