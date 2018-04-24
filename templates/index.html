@@ -8,6 +8,11 @@
 		<div class="header">
 		<h1>World Factbook</h1>
 		</div>
+		<div>
+			{% for s in lota %}
+			<a href="/startWithAlphabetic/{{s}}">{{s}}</a>
+			{% endfor %}
+		</div>
 		<div>There are {{w|length}} countries in this page</div>
 		<ul>
 			{% for c in w %}
