@@ -21,12 +21,22 @@
 			 {{c.name}}</a></li>
 			{% endfor %}
 		</ul>
+		{% if page_number==0 %}
+		<div class='nav_button'>
+			<a href='/begin/{{page_number+page_size}}'>Next Page</a>
+		</div>
+		{% elif page_number==180 %}
+		<div class='nav_button'>
+			<a href='/begin/{{page_number-page_size}}'>Previous Page</a>
+		</div>
+		{% else %}
 		<div class='nav_button'>
 			<a href='/begin/{{page_number-page_size}}'>Previous Page</a>
 		</div>
 		<div class='nav_button'>
 			<a href='/begin/{{page_number+page_size}}'>Next Page</a>
 		</div>
+		{% endif %}
 	</div>
 	</body>
 </html>
