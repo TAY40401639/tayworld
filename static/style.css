@@ -39,6 +39,22 @@ ul li{
     list-style:circle;
 
 }
+ul.sort a:link{
+    background-color: white;
+    border-radius: 1ex;
+    border:solid black;
+    padding: 10px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+ul.sort a:hover{
+    background-color: cyan;
+}
+.sort li{
+    list-style: none;
+
+}
 a{
 	text-decoration: none;
 
