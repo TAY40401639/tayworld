@@ -5,7 +5,6 @@ page_number =10
 w = json.load(open("worldl.json"))
 lota=sorted(list(set([c['name'][0] for c in w])))
 
-print(lota)
 
 for c in w:
     c['tld'] = c['tld'][1:]
