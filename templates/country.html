@@ -27,6 +27,10 @@
 				<div>GDP (million $)</div>
 				<div>{{ "{:,.0f}".format(c['gdp']/1000000) }}</div>
 			</div>
+			<div>
+				<div>Top Level Domain(tld)</div>
+				<div>{{c['tld']}}</div>
+			</div>
 		</div>
 		<img src="/static/flags/{{c['tld']}}.gif" class='big' alt="Can't Upload the image">
 
