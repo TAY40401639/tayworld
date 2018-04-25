@@ -1,5 +1,6 @@
 {% extends "base.html "%}
 {% block content %}
+<div>There are {{w|length}} countries in this page</div>
 		<ul>
 			{% for c in w %}
 			<li><a href='/countryByName/{{c.name}}'>
@@ -25,3 +26,4 @@
 		{% endif %}
 	</div>
 {% endblock %}
+

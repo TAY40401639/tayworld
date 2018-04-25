@@ -1,7 +1,23 @@
 body{
     font-family: arial;
- }
-
+    padding: 0;
+    margin: 0;
+    background:grey;
+}
+.con{
+    width: 500px;
+    background-color: #fff;
+    margin:100px auto;
+    position: relative;
+    border: solid thin grey;
+    padding: 10ex;
+}
+.con h1{
+    text-align: center;
+}
+.sort{
+    text-align: center;
+}
 body.detail{
     font-family: arial;
    
@@ -13,9 +29,10 @@ img.tiny{
     border: solid thin grey;	
 }
 img.big {
-    width: 350px;
+    width: 200px;
     border: solid thin grey;
     position: absolute;
+    top: 35ex;  
     left:55ex;
     bottom: 65ex;
 }
@@ -43,7 +60,7 @@ ul.sort a:link{
     display: inline-block;
 }
 ul.sort a:hover{
-    background-color: cyan;
+    background-color: grey;
 }
 .sort li{
     list-style: none;
@@ -54,20 +71,22 @@ a{
 
 }
 .nav_button{
-    border: solid thin black;
+    border: solid thin grey;
     padding: 1ex;
     width: 15ex;
     text-align: center;
     display: inline-block;
-     border-radius: 1ex;
+    border-radius: 1ex;
+    background-color: grey;
 }
 .button{
-    border: solid thin black;
+    border: solid thin grey;
     padding: 2px;
     width: 8ex;
     text-align: center;
     display: inline-block;
     border-radius: 1ex;
+    background-color: grey;
 }
 input[type=text] {
     padding:5px; 
