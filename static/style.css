@@ -4,15 +4,15 @@ body{
     margin: 0;
     background:grey;
 }
-.con{
+.container{
     width: 500px;
     background-color: #fff;
     margin:100px auto;
     position: relative;
     border: solid thin grey;
-    padding: 10ex;
+    padding: 15ex;
 }
-.con h1{
+.container h1{
     text-align: center;
 }
 .sort{
@@ -33,7 +33,7 @@ img.big {
     border: solid thin grey;
     position: absolute;
     top: 35ex;  
-    left:55ex;
+    left:65ex;
     bottom: 65ex;
 }
 
