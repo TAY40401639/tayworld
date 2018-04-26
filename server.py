@@ -8,7 +8,7 @@ lota=sorted(list(set([c['name'][0] for c in w])))
 
 for c in w:
     c['tld'] = c['tld'][1:]
-page_size = 30
+page_size = 20
 
 app = Flask(__name__)
 
